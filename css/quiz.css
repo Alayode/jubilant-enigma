@@ -66,6 +66,8 @@ body { background-color: #fff; padding: 20px; }
 #myQuiz .question.unanswered .answer:hover {background-color: rgba(238,189,102,.2);}
 
 /* Feedback */
-#myQuiz .feedback { color: #efbe5e; margin-top:10px; transition:opacity 1.5s, margin-top 1.5s; }
+#myQuiz .feedback { color: #efbe5e; margin-top:10px; transition:opacity 1.5s, margin-top 1.5s;
+  visibility: hidden; opacity:0;
+}
 #myQuiz .feedback .btn  { margin-top:5px }
 #myQuiz .feedback strong  { color:#fff; }
