@@ -36,7 +36,7 @@ body { background-color: #fff; padding: 20px; }
 #myQuiz .intro  p { margin: 0px 0px 40px 0px; }
 
 /* Questions */
-#myQuiz .question { width:550px; position:absolute; top:225px; left:40px;}
+#myQuiz .question { width:550px; position:absolute; top:225px; left:660px;}
 #myQuiz .question .txt { font-size:1.6em; margin:0px 0px 20px 0px; }
 #myQuiz .question .answer {
   display:inline-block; font-size:1.1em; width:225px; border:2px solid rgba(238,189,102,.4);
@@ -66,8 +66,13 @@ body { background-color: #fff; padding: 20px; }
 #myQuiz .question.unanswered .answer:hover {background-color: rgba(238,189,102,.2);}
 
 /* Feedback */
+
+/*hidden version */
 #myQuiz .feedback { color: #efbe5e; margin-top:10px; transition:opacity 1.5s, margin-top 1.5s;
   visibility: hidden; opacity:0;
 }
 #myQuiz .feedback .btn  { margin-top:5px }
 #myQuiz .feedback strong  { color:#fff; }
+
+/*visible*/
+#myQuiz .answered .feedback { visibility: visible; opacity:1; margin-top: 10px;}
