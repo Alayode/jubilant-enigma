@@ -5,6 +5,7 @@ body { background-color: #fff; padding: 20px; }
 #myQuiz {
    font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400;
    width:650px; height:650px;
+   position: relative;
    overflow: hidden;
    color:   #fff;
    background: #000 url(../images/background.jpg) no-repeat 0px 0px;
@@ -35,7 +36,7 @@ body { background-color: #fff; padding: 20px; }
 #myQuiz .intro  p { margin: 0px 0px 40px 0px; }
 
 /* Questions */
-#myQuiz .question { width:550px; position:absolute; top:225px left:40px;}
+#myQuiz .question { width:550px; position:absolute; top:225px; left:40px;}
 #myQuiz .question .txt { font-size:1.6em; margin:0px 0px 20px 0px; }
 #myQuiz .question .answer {
   display:inline-block; font-size:1.1em; width:225px; border:2px solid rgba(238,189,102,.4);
@@ -58,3 +59,11 @@ body { background-color: #fff; padding: 20px; }
 
 #myQuiz .question .answer.selected::after{ background-image: url(../images/icon_incorrect.svg);}
 #myQuiz .question .answer.correct::after{ background-image: url(../images/icon_correct.svg);}
+
+/*#myQuiz .question .unanswered .answer {}*/
+/*This will handle the hover states for the questions */
+#myQuiz .question.unanswered .answer {cursor:pointer;}
+#myQuiz .question.unanswered .answer:hover {background-color: rgba(238,189,102,.2);}
+
+
+#myQuiz
