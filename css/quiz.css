@@ -76,3 +76,15 @@ body { background-color: #fff; padding: 20px; }
 
 /*visible*/
 #myQuiz .answered .feedback { visibility: visible; opacity:1; margin-top: 10px;}
+
+/*Results*/
+
+#myQuiz .results {position:absolute; top: 225px; left:40px; width:550px;}
+
+#myQuiz .results .share　a.btn{
+  margin-right: 20px;
+  padding: 9px 15px 8px 42px;
+  background-repeat: no-repeat;
+  background-position: :10px 5px;
+  background-size: 25px 25px;
+}
