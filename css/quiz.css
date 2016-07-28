@@ -55,7 +55,8 @@ transition: opacity 1s, top: 1s;
 opacity:0; /*Created for making the rings disappear but will remain above our dots */
 }
 
-
+#myQuiz .progress div.on {background-color: #efbe5e;}
+#myQuiz .progress div::answered {background-color: #efbe5e;}
 
 /* Intro */
 #myQuiz .intro { position: absolute; top:225px; left: 680px; width:550px; }
