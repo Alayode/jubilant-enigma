@@ -88,3 +88,7 @@ body { background-color: #fff; padding: 20px; }
   background-position: :10px 5px;
   background-size: 25px 25px;
 }
+
+
+#myQuiz .results .share　a.btn.email   { background-color: #f0a121; background-image: url(../images/icon_email.svg); }
+#myQuiz .results .share　a.btn.twitter { background-color: #59adeb; background-image: url(../images/icon_twitter.svg); }
