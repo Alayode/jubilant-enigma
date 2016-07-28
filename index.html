@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html  ng-app="myQuiz">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,13 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="css/quiz.css">
 	</head>
 	<body>
-	<div id="myQuiz">
+	<div id="myQuiz" ng-controller='QuizController'>
 			<h1>Quiz Challenge: <span>Saturn</span></h1>
-  <div class="progress">
-		<div></div>
-		<div></div>
-		<div></div>		
-	</div>
+			<!-- Text Binding  -->
+  <div class="progress">{{totalQuestions}}</div>
 	<div class="intro">
 						<h2>Welcome</h2>
 						<p>Click begin to test your knowledge on Saturn</p>
@@ -44,5 +41,12 @@
 				</div>
  </div>
  </div>
+
+/*scripts*/
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/quiz.js"></script>
+
+
  </body>
 </html>
