@@ -11,13 +11,14 @@
 			<h1>Quiz Challenge: <span>Saturn</span></h1>
 			<!-- Text Binding  -->
   <div class="progress">
-		<div ng-repeat="myQuestion in myQuestions"></div>
+		<div class"{{ ($index === activeQuestion)  ? 'on': 'off' }}" ng-repeat="myQuestion in myQuestions"></div>
 	</div>
 	<!-- <div class="intro"> -->
 	<div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active ' }}">
 						<h2>Welcome</h2>
 						<p>Click begin to test your knowledge on Saturn</p>
-						<p class="btn">Begin</p>
+						<!-- set the ng-click directive to activeQuestion equals 0 -->
+						<p class="btn" ng-click="activeQuestion = 0">Begin</p>
 	</div>
 	<div class="question answered">
 						<p class="txt">This is a question</p>
