@@ -30,6 +30,19 @@ body { background-color: #fff; padding: 20px; }
   color:#fff; text-decoration: none;
   padding: 5px 15px; border-radius:6px;
 }
+/*Progress Bar*/
+#myQuiz .progress { width: 550px; position:absolute; top:160px; left:40px;}
+#myQuiz .progress div{
+  position:relative;
+  display: inline-block;
+  width:30px;
+  height:30px;
+  margin-right:30px;
+  border-radius:50%; background-color: rgba(255,255,255,.2); transtion:background-color 1s;
+}
+
+
+
 
 /* Intro */
 #myQuiz .intro { position: absolute; top:225px; left: 680px; width:550px; }
@@ -79,7 +92,7 @@ body { background-color: #fff; padding: 20px; }
 
 /*Results*/
 
-#myQuiz .results {position:absolute; top: 225px; left:40px; width:550px;}
+#myQuiz .results {position:absolute; top: 225px; left:660px; width:550px;}
 
 #myQuiz .results .share　a.btn{
   margin-right: 20px;
