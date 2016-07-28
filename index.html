@@ -10,8 +10,11 @@
 	<div id="myQuiz" ng-controller='QuizController'>
 			<h1>Quiz Challenge: <span>Saturn</span></h1>
 			<!-- Text Binding  -->
-  <div class="progress">{{totalQuestions}}</div>
-	<div class="intro">
+  <div class="progress">
+		<div ng-repeat="myQuestion in myQuestions"></div>
+	</div>
+	<!-- <div class="intro"> -->
+	<div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active ' }}">
 						<h2>Welcome</h2>
 						<p>Click begin to test your knowledge on Saturn</p>
 						<p class="btn">Begin</p>
