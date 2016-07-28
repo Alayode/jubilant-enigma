@@ -41,6 +41,19 @@ body { background-color: #fff; padding: 20px; }
   border-radius:50%; background-color: rgba(255,255,255,.2); transtion:background-color 1s;
 }
 
+#myQuiz .progress div::after {
+ content:'';
+ display:block;
+ position: absolute;
+ top:-60px;
+ left:-15px;
+ width:65px;
+ height:40px;
+ background: url(../images/ring.svg)
+ no-repeat 0px 0px;
+transition: opacity 1s, top: 1s;
+opacity:0; /*Created for making the rings disappear but will remain above our dots */
+}
 
 
 
