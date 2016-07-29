@@ -11,21 +11,23 @@
 			<h1>Quiz Challenge: <span>Saturn</span></h1>
 			<!-- Text Binding  -->
   <div class="progress">
-		<div class"{{ ($index === activeQuestion)  ? 'on': 'off' }}" ng-repeat="myQuestion in myQuestions"></div>
+		<div class="{{ ($index === activeQuestion)  ? 'on': 'off' }}" ng-repeat="myQuestion in myQuestions"></div>
 	</div>
 	<!-- <div class="intro"> -->
-	<div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active ' }}">
+	<div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}">
 						<h2>Welcome</h2>
 						<p>Click begin to test your knowledge on Saturn</p>
 						<!-- set the ng-click directive to activeQuestion equals 0 -->
 						<p class="btn" ng-click="activeQuestion = 0">Begin</p>
 	</div>
-	<div class="question answered">
-						<p class="txt">This is a question</p>
-						<p class="answer">Choice 1</p>
-						<p class="answer">Choice 2</p>
-						<p class="answer">Choice 3</p>
-						<p class="answer">Choice 4</p>
+	<div class="question
+						{{ $index === activeQuestion ? 'active' : 'inactive' }}
+						{{ $myQuestion.questionState === 'answered' ? 'answered' : 'unanswered' }}
+						" ng-repeat="myQuestion in myQuestions">
+						<p class="txt">{{myQuestions.question}}</p>
+						<p class="answer"
+								ng-click="selectAnswer($parent.$index,$index)"
+								ng-repeat="Answer in myQuestions[$index].answers" >{{Answer.text}}</p>
 						<div class="feedback">
 
 <p>You are<strong> correct.</strong></p>
@@ -46,7 +48,7 @@
  </div>
  </div>
 
-/*scripts*/
+<!-- /*scripts*/ -->
 
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/quiz.js"></script>
