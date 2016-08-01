@@ -18,20 +18,26 @@
 						<h2>Welcome</h2>
 						<p>Click begin to test your knowledge on Saturn</p>
 						<!-- set the ng-click directive to activeQuestion equals 0 -->
-						<p class="btn" ng-click="activeQuestion = 0">Begin</p>
+						<p class="btn" ng-click="activeQuestion = 1">Begin</p>
 	</div>
 	<div class="question
 						{{ $index === activeQuestion ? 'active' : 'inactive' }}
 						{{ $myQuestion.questionState === 'answered' ? 'answered' : 'unanswered' }}
-						" ng-repeat="myQuestion in myQuestions">
+						"
+						ng-repeat="myQuestion in myQuestions">
 						<p class="txt">{{myQuestions.question}}</p>
 						<p class="answer"
+								ng-class = "{
+									image:Answer.image,
+									selected :isSelected($parent.$index,$index),
+							    correct:isCorrect($parent.$index,$index)}"
+									ng-style="{ 'background-image':'url({{Answer.image}})'}"
 								ng-click="selectAnswer($parent.$index,$index)"
 								ng-repeat="Answer in myQuestions[$index].answers" >{{Answer.text}}</p>
 						<div class="feedback">
 
-<p>You are<strong> correct.</strong></p>
-<p>Oops That is not correct.</p>
+<p ng-show ="myQuestions.correctness ==='correct'">You are<strong> correct.</strong></p>
+<p ng-show ="myQuestions.correctness ==='incorrect'">Oops That is not correct.</p>
 <p>Additional feedback.</p>
 <div class="btn">Continue</div>
 
