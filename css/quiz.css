@@ -95,6 +95,13 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
 #myQuiz .question.unanswered .answer {cursor:pointer;}
 #myQuiz .question.unanswered .answer:hover {background-color: rgba(238,189,102,.2);}
 
+
+#myQuiz .question .answer.image {
+    min-height:60px; padding: 0px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
 /* Feedback */
 
 /*hidden version */
@@ -127,3 +134,8 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
 #myQuiz .active, #myQuiz .inactive { transition: left 1.5s ease-in-out; }
 #myQuiz .active { left: 40px; }
 #myQuiz .intro.inactive, #myQuiz.inactive.answered { left: -1350px; }
+
+
+/* Test */
+#myQuiz { height : 1000px; }
+#myQuiz .results { top:650px; !important; left:650px !important };
