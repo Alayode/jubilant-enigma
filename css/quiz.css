@@ -38,7 +38,7 @@ body { background-color: #fff; padding: 20px; }
   width:30px;
   height:30px;
   margin-right:30px;
-  border-radius:50%; background-color: rgba(255,255,255,.2); transtion:background-color 1s;
+  border-radius:50%; background-color: rgba(255,255,255,.2); transition:background-color 1s;
 }
 
 #myQuiz .progress div::after {
@@ -49,7 +49,7 @@ body { background-color: #fff; padding: 20px; }
  left:-15px;
  width:65px;
  height:40px;
- background: url(../images/ring.svg)
+ background: url(../images/ring.svg);
  no-repeat 0px 0px;
 transition: opacity 1s, top: 1s;
 opacity:0; /*Created for making the rings disappear but will remain above our dots */
@@ -83,7 +83,6 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
   content:''; display:block; width:20px; height:20px;
   background:  no-repeat 0px 0px; background-size: 20px 20px;
   position:absolute; top:5px; right:5px;
-
 }
 
 
@@ -92,8 +91,8 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
 
 /*#myQuiz .question .unanswered .answer {}*/
 /*This will handle the hover states for the questions */
-#myQuiz .question.unanswered .answer {cursor:pointer;}
-#myQuiz .question.unanswered .answer:hover {background-color: rgba(238,189,102,.2);}
+#myQuiz .question .unanswered .answer {cursor:pointer;}
+#myQuiz .question .unanswered .answer:hover {background-color: rgba(238,189,102,.2);}
 
 
 #myQuiz .question .answer.image {
@@ -105,7 +104,7 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
 /* Feedback */
 
 /*hidden version */
-#myQuiz .feedback { color: #efbe5e; margin-top:10px; transition:opacity 1.5s, margin-top 1.5s;
+#myQuiz .feedback { color: #efbe5e; margin-top:50px; transition:opacity 1.5s, margin-top 1.5s;
   visibility: hidden; opacity:0;
 }
 #myQuiz .feedback .btn  { margin-top:5px }

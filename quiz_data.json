@@ -1,15 +1,5 @@
 [
   {
-    "question" : "Which image shows a close-up of Saturn?",
-    "answers"  : [
-      {"id"  : 0, "image" : "images/close_up_01.jpg" },
-      {"id"  : 1, "image" : "images/close_up_02.jpg" },
-      {"id"  : 2, "image" : "images/close_up_03.jpg" },
-      {"id"  : 3, "image" : "images/close_up_04.jpg" }
-    ],
-    "correct"  : 3
-  },
-  {
     "question" : "One year on Saturn is equivalent to how many years on Earth?",
     "answers"  : [
       {"id"  : 0, "text" : "12"},
@@ -18,6 +8,16 @@
       {"id"  : 3, "text" : "2"}
     ],
     "correct"  : 2
+  },
+  {
+    "question" : "Which image shows a close-up of Saturn?",
+    "answers"  : [
+      {"id"  : 0, "image" : "images/close_up_01.jpg" },
+      {"id"  : 1, "image" : "images/close_up_02.jpg" },
+      {"id"  : 2, "image" : "images/close_up_03.jpg" },
+      {"id"  : 3, "image" : "images/close_up_04.jpg" }
+    ],
+    "correct"  : 3
   },
   {
     "question" : "What is the name of Saturn's largest moon?",

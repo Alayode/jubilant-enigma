@@ -26,6 +26,7 @@
 					$scope.myQuestions[qIndex].selectedAnswer = aIndex;
 					var correctAnswer = $scope.myQuestions[qIndex].correct;
 					$scope.myQuestions[qIndex].correctAnswer =correctAnswer;
+
 					if( aIndex === correctAnswer ){
 						$scope.myQuestions[qIndex].correctness = 'correct';
 						$scope.score += 1;
@@ -35,7 +36,7 @@
 						$scope.myQuestions[qIndex].questionState = 'answered';
 				}
 				/* Percentage Meter */
-				$scope.percentage = ($scope.score / $scope.totalQuestions)  * 100 
+				$scope.percentage = ($scope.score / $scope.totalQuestions)  * 100 ;
 
 				$scope.isSelected = function(qIndex,aIndex){
 					return  $scope.myQuestions[qIndex].selectedAnswer === aIndex;

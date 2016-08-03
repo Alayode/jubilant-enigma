@@ -11,21 +11,25 @@
 			<h1>Quiz Challenge: <span>Saturn</span></h1>
 			<!-- Text Binding  -->
   <div class="progress">
-		<div class="{{ ($index === activeQuestion)  ? 'on': 'off' }}" ng-repeat="myQuestion in myQuestions"></div>
+		<div class="{{ ($index === activeQuestion)  ? 'on': 'off' }}
+		{{ (myQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}
+		{{ (myQuestion.correctness === 'correct') ? 'correct' : 'incorrect' }}
+		"ng-repeat="myQuestion in myQuestions"></div>
 	</div>
 	<!-- <div class="intro"> -->
 	<div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}">
 						<h2>Welcome</h2>
 						<p>Click begin to test your knowledge on Saturn</p>
 						<!-- set the ng-click directive to activeQuestion equals 0 -->
-						<p class="btn" ng-click="activeQuestion = 1">Begin</p>
+						<p class="btn" ng-click="activeQuestion = 0">Begin</p>
 	</div>
 	<div class="question
 						{{ $index === activeQuestion ? 'active' : 'inactive' }}
-						{{ $myQuestion.questionState === 'answered' ? 'answered' : 'unanswered' }}
+						{{ $myQuestion.questionState === 'answered' ? 'unanswered' : 'answered' }}
+
 						"
 						ng-repeat="myQuestion in myQuestions">
-						<p class="txt">{{myQuestions.question}}</p>
+						<p class="txt">{{myQuestion.question}}</p>
 						<p class="answer"
 								ng-class = "{
 									image:Answer.image,
@@ -36,10 +40,10 @@
 								ng-repeat="Answer in myQuestions[$index].answers" >{{Answer.text}}</p>
 						<div class="feedback">
 
-<p ng-show ="myQuestions.correctness ==='correct'">You are<strong> correct.</strong></p>
-<p ng-show ="myQuestions.correctness ==='incorrect'">Oops That is not correct.</p>
-<p>Additional feedback.</p>
-<div class="btn">Continue</div>
+<p ng-show ="myQuestion.correctness ==='correct'">You are<strong> correct.</strong></p>
+<p ng-show ="myQuestion.correctness ==='incorrect'">Oops That is not correct.</p>
+<p>{{myQuestion.feedback}}</p>
+<div class="btn" ng-click="selectContinue()" >Continue</div>
 
 						</div>
 	</div>
