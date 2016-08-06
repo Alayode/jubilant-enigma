@@ -1,3 +1,5 @@
+/*Stylesheet for angular Quiz App*/
+
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:900|Roboto:400,100);
 
 body { background-color: #fff; padding: 20px; }
@@ -49,8 +51,7 @@ body { background-color: #fff; padding: 20px; }
  left:-15px;
  width:65px;
  height:40px;
- background: url(../images/ring.svg);
- no-repeat 0px 0px;
+ background: url(../images/ring.svg) no-repeat 0px 0px;
 transition: opacity 1s, top: 1s;
 opacity:0; /*Created for making the rings disappear but will remain above our dots */
 }
@@ -117,6 +118,8 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
 
 #myQuiz .results {position:absolute; top: 225px; left:660px; width:550px;}
 
+#myQuiz .results .share {margin-top: 40px;}
+
 #myQuiz .results .share　a.btn{
   margin-right: 20px;
   padding: 9px 15px 8px 42px;
@@ -137,4 +140,4 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
 
 /* Test */
 #myQuiz { height : 1000px; }
-#myQuiz .results { top:650px; !important; left:650px !important };
+#myQuiz .results { top:650px !important; left:650px !important };
