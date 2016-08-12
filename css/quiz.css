@@ -124,7 +124,7 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
   margin-right: 20px;
   padding: 9px 15px 8px 42px;
   background-repeat: no-repeat;
-  background-position: :10px 5px;
+  background-position: 10px 5px;
   background-size: 25px 25px;
 }
 
@@ -140,4 +140,4 @@ opacity:0; /*Created for making the rings disappear but will remain above our do
 
 /* Test */
 #myQuiz { height : 1000px; }
-#myQuiz .results { top:650px !important; left:650px !important };
+#myQuiz .results { top:650px !important; left:40px !important };
