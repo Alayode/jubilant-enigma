@@ -48,6 +48,16 @@
 			$scope.selectContinue = function(){
 				return $scope.activeQuestion += 1;
 			}
+			$scope.createShareLinks = function(percentage){
+				var url = 'http://kayode.me';
+
+				var emailLink = '<a class="btn email" href="mailto:?subject=Try to beat my quiz score!&amp;body=I scored ' + percentage + '%25 on this quiz about Saturn. Try to beat my score at ' + url + '">Email a Friend</a>';
+var twitterLink = '<a class="btn twitter" target="_blank" href="http://twitter.com/share?text=I scored a ' + percentage + '%25 on this quiz about Saturn. Try to beat my score at&amp;hashtags=SaturnQuiz&amp;url=' + url + '">Tweet Your Score</a>';
+				var newMarkup = emailLink + twitterLink ;
+
+				return $sce.trustAsHtml(newMarkup);
+
+		}
 	}]);
 
 
